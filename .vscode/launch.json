@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'image_display'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=image_display",
+                    "--package=image_display"
+                ],
+                "filter": {
+                    "name": "image_display",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "res/debug/rust.png"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'image_display'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=image_display",
+                    "--package=image_display"
+                ],
+                "filter": {
+                    "name": "image_display",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
